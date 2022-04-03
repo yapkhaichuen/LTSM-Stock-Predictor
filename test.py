@@ -5,6 +5,9 @@ import matplotlib.pyplot as plt
 from stock_prediction import create_model, load_data
 from parameters import *
 
+import datetime
+import pytz
+import json
 
 def plot_graph(test_df):
     """
@@ -131,3 +134,31 @@ if not os.path.isdir(csv_results_folder):
     os.mkdir(csv_results_folder)
 csv_filename = os.path.join(csv_results_folder, model_name + ".csv")
 final_df.to_csv(csv_filename)
+
+# Current time of process for server to log. Malaysian time for refrence
+KL = pytz.timezone("Asia/Kuala_Lumpur")
+current_time = str(datetime.datetime.now(KL))
+
+# Summary function
+def short_summary():
+    summary = [
+        {
+            "Ticker": ticker,
+            "Future price after 15 days": f"{future_price:.2f}$",
+            "Mean absolute error": mean_absolute_error,
+            "Accuracy score": accuracy_score,
+            "Total buy profit": total_buy_profit,
+            "Total sell profit": total_sell_profit,
+            "Total profit": total_profit,
+            "Profit per trade": profit_per_trade,
+            "Generated": current_time
+        }
+    ]
+    """save data to json file"""
+    with open("data.json", "w") as outfile:
+        json.dump(summary, outfile, indent=4, sort_keys=False)
+    return summary
+
+
+# Call function
+short_summary()

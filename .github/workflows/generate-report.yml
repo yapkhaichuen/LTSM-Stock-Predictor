@@ -1,15 +1,11 @@
-# This workflow will install Python dependencies, run tests and lint with a single version of Python
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: Model Training
+name: Generate Report
 
 on:
+  push:
+    branches: [ main ]
   schedule:
-    - cron: "0 0 * * 0" # Every Sunday at midnight UTC (0800 MST)
+    - cron: "0 0 * * *" # Every day at midnight UTC (0800 MST)
   workflow_dispatch:
-
-permissions:
-  contents: read
 
 jobs:
   build:
@@ -17,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Set up Python 3.8
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v2
       with:
         python-version: "3.8"
     - name: Install dependencies
@@ -35,23 +31,44 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Execute Python script
       run: |
-        python3 train.py
+        python3 test.py
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         EXCLUDED: ${{ secrets.EXCLUDED }}
         EXCLUDED_LANGS: ${{ secrets.EXCLUDED_LANGS }}
         COUNT_STATS_FROM_FORKS: ${{ secrets.COUNT_STATS_FROM_FORKS }}
+      
 
-
-# Commits all changed files to the repository
+    # Commits all changed files to the repository
     - name: Commit to the output branch of repo
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add .
-        git commit -m 'Model Trained' || echo
+        git commit -m 'Generated Report' || echo
         git push
         # "echo" returns true so the build succeeds, even if no changed files
-        git commit -m 'Model Trained' || echo
+        git commit -m 'Generated Report' || echo
         git push
+        
+    - name: Markdown autodocs
+      uses: dineshsonachalam/markdown-autodocs@v1.0.4
+      with:
+    # Optional, defaults to author of the commit that triggered the run
+        commit_author: Author <github-actions[bot]>
+
+    # Optional, defaults to "actions@github.com"
+        commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+
+    # Optional, but recommended
+    # Defaults to "Apply automatic changes"
+        commit_message: Report generated to README
+        branch: main
+
+    # Optional output file paths, defaults to '[./README.md]'.
+        output_file_paths: '[README.md]'
+
+    # Categories to automatically sync or transform its contents in the markdown files.
+    # Defaults to '[code-block,json-to-html-table,workflow-artifact-table]'
+        categories: '[code-block,json-to-html-table,workflow-artifact-table]'
