@@ -5,7 +5,7 @@ name: Model Training
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # Every Sunday at midnight UTC (0800 MST)
+    - cron: "0 0 * * *" # Every Sunday at midnight UTC (0800 MST)
   workflow_dispatch:
 
 permissions:
