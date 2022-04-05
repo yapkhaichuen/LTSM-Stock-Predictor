@@ -140,14 +140,15 @@ KL = pytz.timezone("Asia/Kuala_Lumpur")
 current_time = str(datetime.datetime.now(KL))
 
 # Predicted days, currently is 1 day in the future
-tomorrow = datetime.date.today(KL) + datetime.timedelta(days=1)
+tomorrow = datetime.date.today() + datetime.timedelta(days=1)
 
 # Summary function
 def short_summary():
     summary = [
         {
             "Ticker": ticker,
-            f"Future price after {LOOKUP_STEP} day, {tomorrow}": f"{future_price:.2f}$",
+            f"Future price after {LOOKUP_STEP} day,
+            f"Predicted price for {tomorrow}": f"{future_price:.2f}$",
             "Mean absolute error": mean_absolute_error,
             "Accuracy score": accuracy_score,
             "Total buy profit": total_buy_profit,
