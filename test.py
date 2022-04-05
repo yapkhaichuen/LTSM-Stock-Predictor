@@ -140,7 +140,7 @@ KL = pytz.timezone("Asia/Kuala_Lumpur")
 current_time = str(datetime.datetime.now(KL))
 
 # Predicted days, currently is 1 day in the future
-tomorrow = datetime.date.today() + datetime.timedelta(days=1)
+tomorrow = datetime.date.today() + datetime.timedelta(days = int(LOOKUP_STEP))
 
 # Summary function
 def short_summary():
