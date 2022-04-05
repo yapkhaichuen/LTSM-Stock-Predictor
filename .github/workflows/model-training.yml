@@ -8,9 +8,6 @@ on:
     - cron: "0 0 * * *" # Every 0000 UTC)
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
   build:
 
