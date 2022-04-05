@@ -3,6 +3,9 @@
 
 Predicting different stock prices using Long Short-Term Memory Recurrent Neural Network in Python using TensorFlow 2 and Keras. Highly customizable for different stock tickers. Current ticker: AMZN (Amazon).
 
+View deployment here: <br>
+https://yapkhaichuen.github.io/LTSM-Stock-Predictor/
+
 ## **Basic Usage**
 1. Install the required libraries by running ***pip install -r requirements.txt***.
 1. Run ***train.py*** to train our model. (This will take some time approx. 4 hours)
