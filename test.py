@@ -147,7 +147,7 @@ def short_summary():
     summary = [
         {
             "Ticker": ticker,
-            f"Future price after: {LOOKUP_STEP} day",
+            f"Future price after: f"{LOOKUP_STEP} day",
             f"Predicted price for {tomorrow}": f"{future_price:.2f}$",
             "Mean absolute error": mean_absolute_error,
             "Accuracy score": accuracy_score,
