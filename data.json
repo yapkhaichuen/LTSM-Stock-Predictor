@@ -2,13 +2,13 @@
     {
         "Ticker": "AMZN",
         "Future price after": "1 day",
-        "Predicted price for 2022-10-20": "117.51$",
-        "Mean absolute error": 0.6275922808052201,
-        "Accuracy score": 0.5015748031496063,
-        "Total buy profit": 33.52697797119616,
-        "Total sell profit": -20.866260699927853,
-        "Total profit": 12.660717271268307,
-        "Profit per trade": 0.009969068717534101,
-        "Generated": "2022-10-19 20:16:24.144267+08:00"
+        "Predicted price for 2022-10-21": "115.42$",
+        "Mean absolute error": 0.6786280333145893,
+        "Accuracy score": 0.5019669551534225,
+        "Total buy profit": 55.70554545521739,
+        "Total sell profit": -17.92391345649956,
+        "Total profit": 37.78163199871783,
+        "Profit per trade": 0.029725910305836215,
+        "Generated": "2022-10-20 20:15:14.508746+08:00"
     }
 ]
