@@ -22,14 +22,14 @@ Note: the project is currently running on GitHub Actions, you can take a look at
     {
         "Ticker": "AMZN",
         "Future price after": "1 day",
-        "Predicted price for 2023-12-29": "154.45$",
-        "Mean absolute error": 0.7546171620534399,
-        "Accuracy score": 0.5045112781954887,
-        "Total buy profit": 37.5354449227453,
-        "Total sell profit": 45.51034522056581,
-        "Total profit": 83.04579014331111,
-        "Profit per trade": 0.06244044371677527,
-        "Generated": "2023-12-28 20:11:49.293531+08:00"
+        "Predicted price for 2023-12-30": "153.93$",
+        "Mean absolute error": 0.6808026176809091,
+        "Accuracy score": 0.5075187969924813,
+        "Total buy profit": 37.609867043793365,
+        "Total sell profit": 13.403805732726997,
+        "Total profit": 51.013672776520366,
+        "Profit per trade": 0.03835614494475215,
+        "Generated": "2023-12-29 20:10:22.262604+08:00"
     }
 ]
 ```
@@ -38,7 +38,7 @@ Note: the project is currently running on GitHub Actions, you can take a look at
 
 ## **Generated report**
 <!-- MARKDOWN-AUTO-DOCS:START (JSON_TO_HTML_TABLE:src=./data.json) -->
-<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="ticker-th">Ticker</th><th class="future-price-after-th">Future price after</th><th class="predicted-price-for-2023-12-29-th">Predicted price for 2023-12-29</th><th class="mean-absolute-error-th">Mean absolute error</th><th class="accuracy-score-th">Accuracy score</th><th class="total-buy-profit-th">Total buy profit</th><th class="total-sell-profit-th">Total sell profit</th><th class="total-profit-th">Total profit</th><th class="profit-per-trade-th">Profit per trade</th><th class="generated-th">Generated</th></tr></thead><tbody ><tr ><td class="ticker-td td_text">AMZN</td><td class="future-price-after-td td_text">1 day</td><td class="predicted-price-for-2023-12-29-td td_text">154.45$</td><td class="mean-absolute-error-td td_num">0.7546171620534399</td><td class="accuracy-score-td td_num">0.5045112781954887</td><td class="total-buy-profit-td td_num">37.5354449227453</td><td class="total-sell-profit-td td_num">45.51034522056581</td><td class="total-profit-td td_num">83.04579014331111</td><td class="profit-per-trade-td td_num">0.06244044371677527</td><td class="generated-td td_text">2023-12-28 20:11:49.293531+08:00</td></tr></tbody></table>
+<table class="JSON-TO-HTML-TABLE"><thead><tr><th class="ticker-th">Ticker</th><th class="future-price-after-th">Future price after</th><th class="predicted-price-for-2023-12-30-th">Predicted price for 2023-12-30</th><th class="mean-absolute-error-th">Mean absolute error</th><th class="accuracy-score-th">Accuracy score</th><th class="total-buy-profit-th">Total buy profit</th><th class="total-sell-profit-th">Total sell profit</th><th class="total-profit-th">Total profit</th><th class="profit-per-trade-th">Profit per trade</th><th class="generated-th">Generated</th></tr></thead><tbody ><tr ><td class="ticker-td td_text">AMZN</td><td class="future-price-after-td td_text">1 day</td><td class="predicted-price-for-2023-12-30-td td_text">153.93$</td><td class="mean-absolute-error-td td_num">0.6808026176809091</td><td class="accuracy-score-td td_num">0.5075187969924813</td><td class="total-buy-profit-td td_num">37.609867043793365</td><td class="total-sell-profit-td td_num">13.403805732726997</td><td class="total-profit-td td_num">51.013672776520366</td><td class="profit-per-trade-td td_num">0.03835614494475215</td><td class="generated-td td_text">2023-12-29 20:10:22.262604+08:00</td></tr></tbody></table>
 <!-- MARKDOWN-AUTO-DOCS:END -->
 
 ## **Graphs**
