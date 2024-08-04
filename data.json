@@ -2,13 +2,13 @@
     {
         "Ticker": "AMZN",
         "Future price after": "1 day",
-        "Predicted price for 2024-08-04": "168.91$",
+        "Predicted price for 2024-08-05": "168.91$",
         "Mean absolute error": 0.7079272565856646,
         "Accuracy score": 0.4933823529411765,
         "Total buy profit": 62.21415691822771,
         "Total sell profit": 2.6663177609444055,
         "Total profit": 64.88047467917211,
         "Profit per trade": 0.0477062313817442,
-        "Generated": "2024-08-03 20:12:44.143091+08:00"
+        "Generated": "2024-08-04 20:13:21.811675+08:00"
     }
 ]
